@@ -24,3 +24,35 @@ function function-adjuststatusbar(){
   });
   
 }
+      <button onclick="median.statusbar.set(transparentLightMode)" class="button-demo">Transparent Light Mode</button>
+      <button onclick="median.statusbar.set(transparentDarkMode)" class="button-demo">Transparent Dark Mode</button>
+      <button onclick="median.statusbar.set(whiteLightMode)" class="button-demo">White Light Mode</button>
+      <button onclick="median.statusbar.set(blackDarkMode)" class="button-demo">Black Dark Mode</button>
+      <button onclick="median.statusbar.set(overlayOn)" class="button-demo">Overlay On</button>
+      <button onclick="median.statusbar.set(overlayOff)" class="button-demo">Overlay Off</button>
+<script>
+      var transparentLightMode = {
+          style: "light",
+          color: "00000000",
+          overlay: true
+      };
+      var transparentDarkMode = {
+          style: "dark",
+          color: "00000000",
+          overlay: true
+      };
+      var whiteLightMode = {
+          style: "light",
+          color: "#FFFFFF"
+      };
+      var blackDarkMode = {
+          style: "dark",
+          color: "#000000"
+      };
+      var overlayOn = {
+          overlay: true
+      };
+      var overlayOff = {
+          overlay: false
+      };
+  </script>
