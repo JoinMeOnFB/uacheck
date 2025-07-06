@@ -9,7 +9,7 @@
   text-decoration: none;
 }
 .fcc-btn:hover {
-  background-color: #00ff00;
+  background-color: #ee0000;
 }
 </style>
       <button onclick="median.statusbar.set(transparentLightMode)" class="button-demo">Transparent Light Mode</button>
@@ -19,6 +19,9 @@
       <button onclick="median.statusbar.set(overlayOn)" class="button-demo">Overlay On</button>
       <button onclick="median.statusbar.set(overlayOff)" class="button-demo">Overlay Off</button>
 <button class="button-demo" onclick="clearCache()">Clear Cache</button>
+<button onclick="gonative.android.screen.fullscreen();" class="button-demo">Enable Full Screen</button>
+        <button onclick="gonative.android.screen.normal();" class="button-demo">Disable Full Screen</button>
+<a class="fcc-btn" href="https://youtube.com">YouTube</a>
 <script>
       var transparentLightMode = {
           style: "light",
