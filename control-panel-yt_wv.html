@@ -1,35 +1,24 @@
 <h1>Control Panel</h1>
-<button onclick="median.webview.clearCache()">Clear Cache</button>
 <button onclick="javascript.window.close()">Close App</button>
 <a class="fcc-btn" href="https://median.dev">Médian Test Doc.</a>
 <style>
 .fcc-btn {
-  background-color: #199319;
+  background-color: #ff0000;
   color: white;
-  padding: 15px 25px;
+  padding: 10px 20px;
   text-decoration: none;
 }
 .fcc-btn:hover {
-  background-color: #223094;
+  background-color: #00ff00;
 }
 </style>
-<button onclick="fonction-adjuststatusbar()">status bar</button>
-// Set statusbar styling
-function function-adjuststatusbar(){
-
-  // Set status bar to light mode, red color, with overlay
-  median.statusbar.set({
-    'style':'dark',
-    'overlay':false
-  });
-  
-}
       <button onclick="median.statusbar.set(transparentLightMode)" class="button-demo">Transparent Light Mode</button>
       <button onclick="median.statusbar.set(transparentDarkMode)" class="button-demo">Transparent Dark Mode</button>
       <button onclick="median.statusbar.set(whiteLightMode)" class="button-demo">White Light Mode</button>
       <button onclick="median.statusbar.set(blackDarkMode)" class="button-demo">Black Dark Mode</button>
       <button onclick="median.statusbar.set(overlayOn)" class="button-demo">Overlay On</button>
       <button onclick="median.statusbar.set(overlayOff)" class="button-demo">Overlay Off</button>
+<button class="button-demo" onclick="clearCache()">Clear Cache</button>
 <script>
       var transparentLightMode = {
           style: "light",
@@ -56,3 +45,8 @@ function function-adjuststatusbar(){
           overlay: false
       };
   </script>
+<script>
+        function clearCache() {
+            median.webview.clearCache();
+        }
+</script>
