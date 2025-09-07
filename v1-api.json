@@ -1,7 +1,7 @@
 { 
                 name: "Abbey Road", 
                 category: "The Beatles", 
-                image: "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=500&h=500&fit=crop" 
+                image: "https://raw.githubusercontent.com/JoinMeOnFB/uacheck/refs/heads/main/image.png" 
             },
             { 
                 name: "The Joshua Tree", 
@@ -11,5 +11,5 @@
             { 
                 name: "Nevermind", 
                 category: "Nirvana", 
-                image: "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=500&h=500&fit=crop" 
+                image: "https://media.idownloadblog.com/wp-content/uploads/2012/12/YouTube-for-iOS-app-icon-full-size.jpg" 
             }
