@@ -1,20 +1,15 @@
-{
-  "totalCount": 3,
-  "albums": [
-    {
-      "title": "f",
-      "artist": "f",
-      "image": "https://cdn.deepseek.com/chat/icon.png"
-    },
-    {
-      "title": "f",
-      "artist": "f",
-      "image": "https://cdn.deepseek.com/chat/icon.png"
-    },
-    {
-      "title": "f",
-      "artist": "f",
-      "image": "https://cdn.deepseek.com/chat/icon.png"
-    }
-  ]
-}
+{ 
+                name: "Abbey Road", 
+                category: "The Beatles", 
+                image: "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=500&h=500&fit=crop" 
+            },
+            { 
+                name: "The Joshua Tree", 
+                category: "U2", 
+                image: "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=500&h=500&fit=crop" 
+            },
+            { 
+                name: "Nevermind", 
+                category: "Nirvana", 
+                image: "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=500&h=500&fit=crop" 
+            }
