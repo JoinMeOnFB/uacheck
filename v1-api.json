@@ -1,22 +1,16 @@
 {
-                    "menuItems": [
-                        {
-                          {
-                            "label": "Podcasts",
-                            "backgroundColor": "linear-gradient(145deg, #ffcc00 0%, #e6b800 50%, #ffcc00 100%)",
-                            "iconSVG": `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
-                                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
-                                <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
-                            </svg>`,
-                            "websiteURL": "https://apple.com/podcasts"
-                        },
-                        {
-                            "label": "YouTube",
-                            "backgroundColor": "linear-gradient(145deg, #ff0000 0%, #cc0000 50%, #ff0000 100%)",
-                            "iconSVG": `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
-                                <path d="M19.67 8.12c-.23-.86-.9-1.53-1.76-1.76C16.19 6 12 6 12 6s-4.19 0-5.91.36c-.86.23-1.53.9-1.76 1.76C4 9.81 4 12 4 12s0 2.19.33 3.88c.23.86.9 1.53 1.76 1.76C7.81 18 12 18 12 18s4.19 0 5.91-.36c.86-.23 1.53-.9 1.76-1.76C20 14.19 20 12 20 12s0-2.19-.33-3.88zM10 15V9l5.19 3L10 15z"/>
-                            </svg>`,
-                            "websiteURL": "https://youtube.com"
-                        }
-                    ]
-                }
+  "menuItems": [
+    {
+      "label": "Music",
+      "backgroundColor": "linear-gradient(145deg, #007aff 0%, #0050c8 50%, #007aff 100%)",
+      "iconSVG": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z'/></svg>",
+      "websiteURL": "https://spotify.com"
+    },
+    {
+      "label": "YouTube",
+      "backgroundColor": "linear-gradient(45deg, #6a11cb 0%, #2575fc 50%, #00c6ff 100%)",
+      "iconSVG": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M19.67 8.12c-.23-.86-.9-1.53-1.76-1.76C16.19 6 12 6 12 6s-4.19 0-5.91.36c-.86.23-1.53.9-1.76 1.76C4 9.81 4 12 4 12s0 2.19.33 3.88c.23.86.9 1.53 1.76 1.76C7.81 18 12 18 12 18s4.19 0 5.91-.36c.86-.23 1.53-.9 1.76-1.76C20 14.19 20 12 20 12s0-2.19-.33-3.88zM10 15V9l5.19 3L10 15z'/></svg>",
+      "websiteURL": "https://youtube.com"
+    }
+  ]
+}
