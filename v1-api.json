@@ -20,7 +20,7 @@
     },
     {
       "label": "YouTube",
-      "backgroundColor": "#DC3545",
+      "backgroundColor": "linear-gradient(45deg, #6a11cb 0%, #2575fc 50%, #00c6ff 100%)",
       "iconSVG": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M19.67 8.12c-.23-.86-.9-1.53-1.76-1.76C16.19 6 12 6 12 6s-4.19 0-5.91.36c-.86.23-1.53.9-1.76 1.76C4 9.81 4 12 4 12s0 2.19.33 3.88c.23.86.9 1.53 1.76 1.76C7.81 18 12 18 12 18s4.19 0 5.91-.36c.86-.23 1.53-.9 1.76-1.76C20 14.19 20 12 20 12s0-2.19-.33-3.88zM10 15V9l5.19 3L10 15z'/></svg>",
       "websiteURL": "https://youtube.com"
     }
