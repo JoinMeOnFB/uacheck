@@ -2,7 +2,7 @@
   "menuItems": [
     {
       "label": "Music",
-      "backgroundColor": "linear-gradient(145deg, #007aff 0%, #0050c8 50%, #007aff 100%)",
+      "backgroundColor": "linear-gradient(145deg, #a00 0%, #c00 50%, #e00 100%)",
       "iconSVG": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z'/></svg>",
       "websiteURL": "https://spotify.com"
     },
