@@ -1,37 +1,168 @@
 <!DOCTYPE html>
-<html>
-
-    <meta name="viewport" content="width=device-width, initial-scale=2.0"> 
-
-<body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel</title>
     <style>
-        .fcc-btn {
-  background-color: #199319;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Calibri', 'Segoe UI', sans-serif;
         }
-        .fcc-btn:hover {
-  background-color: #223094;
+        
+        body {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: white;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .button-grid {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: block;
+            padding: 16px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to bottom, #4a90e2, #2c5aa0);
+            color: white;
+            border: 1px solid #1a3c6e;
+            box-shadow: 
+                0 4px 0 #1a3c6e,
+                0 6px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(2px);
+            box-shadow: 
+                0 2px 0 #1a3c6e,
+                0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(to bottom, #2ecc71, #219653);
+            color: white;
+            border: 1px solid #18693d;
+            box-shadow: 
+                0 4px 0 #18693d,
+                0 6px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(2px);
+            box-shadow: 
+                0 2px 0 #18693d,
+                0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        .user-agent-info {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 15px;
+            font-family: 'Consolas', monospace;
+            word-break: break-all;
+            font-size: 0.9rem;
+            border: 1px solid #ccc;
+            box-shadow: 
+                inset 0 1px 3px rgba(0, 0, 0, 0.2),
+                0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .median-detected {
+            background: rgba(232, 245, 233, 0.9);
+            border: 1px solid #2ecc71;
+            box-shadow: 
+                inset 0 1px 3px rgba(0, 0, 0, 0.1),
+                0 4px 8px rgba(46, 204, 113, 0.2);
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                max-width: 100%;
+            }
+            
+            h1 {
+                font-size: 1.7rem;
+            }
+            
+            .btn {
+                padding: 14px 16px;
+            }
         }
     </style>
-    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Control Panel</h1>
+        </header>
+        
+        <div class="button-grid">
+            <a href="control-panel-yt_wv.html" class="btn btn-primary">YT WV Control Panel</a>
+            <a href="https://streamm4u.com.co/tv-series/the-wonderfully-weird-world-of-gumball-2025-ybt8f" class="btn btn-secondary">TWWWOG (The Wonderfully Weird World of Gumball 2025)</a>
+        </div>
+        
+        <div class="user-agent-info" id="userAgentContainer">
+            <div id="user-agent-demo">Detecting...</div>
+        </div>
+    </div>
+
     <script>
-      window.onload = function() {
-       let agent = navigator.userAgent;
-       document.getElementById("demo").innerHTML = "Your User-agent/Browser is:" + agent;
-      };
-        if (navigator.userAgent.toLowerCase().includes('median')) {
-            // If we're already on the control panel page, don't redirect again
-            if (!window.location.href.includes('control-panel')) {
-                window.location.href = 'https://joinmeonfb.github.io/uacheck/control-panel-yt_wv.html';
+        document.addEventListener('DOMContentLoaded', function() {
+            const userAgent = navigator.userAgent;
+            document.getElementById('user-agent-demo').textContent = userAgent;
+            
+            if (userAgent.toLowerCase().includes('median')) {
+                if (!window.location.href.includes('control-panel')) {
+                    document.getElementById('userAgentContainer').classList.add('median-detected');
+                    setTimeout(function() {
+                        window.location.href = 'https://joinmeonfb.github.io/uacheck/control-panel-yt_wv.html';
+                    }, 1000);
+                }
+            }
+        });
     </script>
-    
-  <a class="fcc-btn" href="control-panel-yt_wv.html">YT WV Control Panel</a>
-  <a class="fcc-btn" href="https://streamm4u.com.co/tv-series/the-wonderfully-weird-world-of-gumball-2025-ybt8f">TWWWOG(The Wonderfully Weird World of Gumball 2025)</a>
-    
-<h1 id="demo"></h1>
-
 </body>
-
 </html>
