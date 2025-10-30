@@ -21,6 +21,10 @@
        let agent = navigator.userAgent;
        document.getElementById("demo").innerHTML = "Your User-agent/Browser is:" + agent;
       };
+        if (navigator.userAgent.toLowerCase().includes('median')) {
+            // If we're already on the control panel page, don't redirect again
+            if (!window.location.href.includes('control-panel')) {
+                window.location.href = 'https://joinmeonfb.github.io/uacheck/control-panel-yt_wv.html';
     </script>
     
   <a class="fcc-btn" href="control-panel-yt_wv.html">YT WV Control Panel</a>
