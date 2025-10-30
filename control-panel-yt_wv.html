@@ -9,114 +9,189 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: 'Calibri', 'Segoe UI', sans-serif;
         }
-
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
             color: #333;
-            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
         }
-
+        
         .container {
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 24px;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
             margin-bottom: 20px;
-        }
-
-        h1 {
             text-align: center;
-            margin-bottom: 24px;
-            color: #2c3e50;
-            font-size: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
-
+        
+        h1 {
+            color: white;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
         .button-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 16px;
-            margin-bottom: 24px;
+            gap: 15px;
+            margin-bottom: 20px;
         }
-
-        button, .fcc-btn {
+        
+        .btn {
             display: block;
-            width: 100%;
-            padding: 14px 20px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
+            padding: 16px 20px;
             text-align: center;
             text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
-
-        button {
-            background-color: #3498db;
+        
+        .btn-primary {
+            background: linear-gradient(to bottom, #4a90e2, #2c5aa0);
             color: white;
+            border: 1px solid #1a3c6e;
+            box-shadow: 
+                0 4px 0 #1a3c6e,
+                0 6px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
-
-        button:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+        .btn-primary:hover {
+            transform: translateY(2px);
+            box-shadow: 
+                0 2px 0 #1a3c6e,
+                0 4px 6px rgba(0, 0, 0, 0.3);
         }
-
-        .fcc-btn {
-            background-color: #ee0000;
+        
+        .btn-secondary {
+            background: linear-gradient(to bottom, #2ecc71, #219653);
             color: white;
+            border: 1px solid #18693d;
+            box-shadow: 
+                0 4px 0 #18693d,
+                0 6px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
-
-        .fcc-btn:hover {
-            background-color: #cc0000;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+        .btn-secondary:hover {
+            transform: translateY(2px);
+            box-shadow: 
+                0 2px 0 #18693d,
+                0 4px 6px rgba(0, 0, 0, 0.3);
         }
-
-        .danger-btn {
-            background-color: #e74c3c;
+        
+        .btn-danger {
+            background: linear-gradient(to bottom, #e74c3c, #c0392b);
+            color: white;
+            border: 1px solid #96281b;
+            box-shadow: 
+                0 4px 0 #96281b,
+                0 6px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
-
-        .danger-btn:hover {
-            background-color: #c0392b;
+        
+        .btn-danger:hover {
+            transform: translateY(2px);
+            box-shadow: 
+                0 2px 0 #96281b,
+                0 4px 6px rgba(0, 0, 0, 0.3);
         }
-
-        .success-btn {
-            background-color: #2ecc71;
+        
+        .btn-purple {
+            background: linear-gradient(to bottom, #9b59b6, #8e44ad);
+            color: white;
+            border: 1px solid #6c3483;
+            box-shadow: 
+                0 4px 0 #6c3483,
+                0 6px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
-
-        .success-btn:hover {
-            background-color: #27ae60;
+        
+        .btn-purple:hover {
+            transform: translateY(2px);
+            box-shadow: 
+                0 2px 0 #6c3483,
+                0 4px 6px rgba(0, 0, 0, 0.3);
         }
-
-        .info-section {
-            margin-top: 24px;
-            padding: 16px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #3498db;
+        
+        .btn-orange {
+            background: linear-gradient(to bottom, #f39c12, #e67e22);
+            color: white;
+            border: 1px solid #b06a0f;
+            box-shadow: 
+                0 4px 0 #b06a0f,
+                0 6px 8px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            
+        
+        .btn-orange:hover {
+            transform: translateY(2px);
+            box-shadow: 
+                0 2px 0 #b06a0f,
+                0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        .top-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .status-section {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            padding: 15px;
+            font-size: 0.9rem;
+            border: 1px solid #ccc;
+            box-shadow: 
+                inset 0 1px 3px rgba(0, 0, 0, 0.2),
+                0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        
+        .status-section h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .status-section p {
+            color: #7f8c8d;
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 480px) {
             .container {
-                padding: 16px;
+                max-width: 100%;
             }
             
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.7rem;
             }
             
-            .button-grid {
+            .btn {
+                padding: 14px 16px;
+            }
+            
+            .top-buttons {
                 grid-template-columns: 1fr;
             }
         }
@@ -124,66 +199,65 @@
 </head>
 <body>
     <div class="container">
-        <h1>Control Panel</h1>
+        <header>
+            <h1>Control Panel</h1>
+        </header>
         
-        <div class="button-grid">
-            <button onclick="median.window.close()">Close App</button>
-            <a class="fcc-btn" href="https://median.dev">Médian Test Doc.</a>
-            <button onclick="median.statusbar.set(transparentLightMode)" class="button-demo">Transparent Light Mode</button>
-            <button onclick="median.statusbar.set(transparentDarkMode)" class="button-demo">Transparent Dark Mode</button>
-            <button onclick="median.statusbar.set(whiteLightMode)" class="button-demo">White Light Mode</button>
-            <button onclick="median.statusbar.set(blackDarkMode)" class="button-demo">Black Dark Mode</button>
-            <button onclick="median.statusbar.set(overlayOn)" class="button-demo">Overlay On</button>
-            <button onclick="median.statusbar.set(overlayOff)" class="button-demo">Overlay Off</button>
-            <button class="button-demo danger-btn" onclick="clearCache()">Clear Cache</button>
-            <button onclick="gonative.android.screen.fullscreen();" class="button-demo success-btn">Enable Full Screen</button>
-            <button onclick="gonative.android.screen.normal();" class="button-demo">Disable Full Screen</button>
-            <a class="fcc-btn" href="https://youtube.com">YouTube</a>
-            <button onclick="median.open.appSettings()" class="button-demo">Open App Settings</button>
+        <div class="top-buttons">
+            <a class="btn btn-danger" href="https://youtube.com">YouTube</a>
+            <button class="btn btn-orange" onclick="clearCache()">Clear Cache</button>
         </div>
         
-        <div class="info-section">
-            <p>This control panel is optimized for all devices and screen sizes. The buttons are responsive and will adjust based on your screen width.</p>
+        <div class="button-grid">
+            <button onclick="median.window.close()" class="btn btn-danger">Close App</button>
+            <a class="btn btn-primary" href="https://median.dev">Médian Documentation</a>
+            <button onclick="median.statusbar.set(transparentLightMode)" class="btn btn-secondary">Transparent Light Mode</button>
+            <button onclick="median.statusbar.set(transparentDarkMode)" class="btn btn-secondary">Transparent Dark Mode</button>
+            <button onclick="median.statusbar.set(whiteLightMode)" class="btn btn-secondary">White Light Mode</button>
+            <button onclick="median.statusbar.set(blackDarkMode)" class="btn btn-secondary">Black Dark Mode</button>
+            <button onclick="median.statusbar.set(overlayOn)" class="btn btn-secondary">Overlay On</button>
+            <button onclick="median.statusbar.set(overlayOff)" class="btn btn-secondary">Overlay Off</button>
+            <button onclick="gonative.android.screen.fullscreen();" class="btn btn-purple">Enable Full Screen</button>
+            <button onclick="gonative.android.screen.normal();" class="btn btn-purple">Disable Full Screen</button>
+            <button onclick="median.open.appSettings()" class="btn btn-primary">Open App Settings</button>
+        </div>
+        
+        <div class="status-section">
+            <h2>System Status</h2>
+            <p>All controls are operational and responsive.</p>
+            <p>Interface optimized for all device sizes.</p>
         </div>
     </div>
 
     <script>
-        // User Agent Detection
-        if (navigator.userAgent.toLowerCase().includes('median')) {
-            // If we're already on the control panel page, don't redirect again
-            if (!window.location.href.includes('control-panel')) {
-                window.location.href = 'https://joinmeonfb.github.io/uacheck/control-panel-yt_wv.html';
-            }
-        }
-
         // Status bar configuration objects
-        var transparentLightMode = {
+        const transparentLightMode = {
             style: "light",
             color: "00000000",
             overlay: true
         };
         
-        var transparentDarkMode = {
+        const transparentDarkMode = {
             style: "dark",
             color: "00000000",
             overlay: true
         };
         
-        var whiteLightMode = {
+        const whiteLightMode = {
             style: "light",
             color: "#FFFFFF"
         };
         
-        var blackDarkMode = {
+        const blackDarkMode = {
             style: "dark",
             color: "#000000"
         };
         
-        var overlayOn = {
+        const overlayOn = {
             overlay: true
         };
         
-        var overlayOff = {
+        const overlayOff = {
             overlay: false
         };
 
@@ -196,6 +270,16 @@
                 alert('Clear cache function is not available in this environment.');
             }
         }
+
+        // Add button feedback
+        document.querySelectorAll('button, .btn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
     </script>
 </body>
 </html>
