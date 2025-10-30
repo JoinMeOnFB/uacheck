@@ -1,57 +1,201 @@
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
-<h1>Control Panel</h1>
-<button onclick="median.window.close()">Close App</button>
-<a class="fcc-btn" href="https://median.dev">Médian Test Doc.</a>
-<style>
-.fcc-btn {
-  background-color: #ee0000;
-  color: white;
-  padding: 5px 10px;
-  text-decoration: none;
-}
-.fcc-btn:hover {
-  background-color: #cc0000;
-}
-</style>
-      <button onclick="median.statusbar.set(transparentLightMode)" class="button-demo">Transparent Light Mode</button>
-      <button onclick="median.statusbar.set(transparentDarkMode)" class="button-demo">Transparent Dark Mode</button>
-      <button onclick="median.statusbar.set(whiteLightMode)" class="button-demo">White Light Mode</button>
-      <button onclick="median.statusbar.set(blackDarkMode)" class="button-demo">Black Dark Mode</button>
-      <button onclick="median.statusbar.set(overlayOn)" class="button-demo">Overlay On</button>
-      <button onclick="median.statusbar.set(overlayOff)" class="button-demo">Overlay Off</button>
-<button class="button-demo" onclick="clearCache()">Clear Cache</button>
-<button onclick="gonative.android.screen.fullscreen();" class="button-demo">Enable Full Screen</button>
-        <button onclick="gonative.android.screen.normal();" class="button-demo">Disable Full Screen</button>
-<a class="fcc-btn" href="https://youtube.com">YouTube</a>
-<button onclick="median.open.appSettings()" class="button-demo">Press to Open App Settings</button>
-<script>
-      var transparentLightMode = {
-          style: "light",
-          color: "00000000",
-          overlay: true
-      };
-      var transparentDarkMode = {
-          style: "dark",
-          color: "00000000",
-          overlay: true
-      };
-      var whiteLightMode = {
-          style: "light",
-          color: "#FFFFFF"
-      };
-      var blackDarkMode = {
-          style: "dark",
-          color: "#000000"
-      };
-      var overlayOn = {
-          overlay: true
-      };
-      var overlayOff = {
-          overlay: false
-      };
-  </script>
-<script>
-        function clearCache() {
-            median.webview.clearCache();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-</script>
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: #2c3e50;
+            font-size: 2rem;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        button, .fcc-btn {
+            display: block;
+            width: 100%;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .fcc-btn {
+            background-color: #ee0000;
+            color: white;
+        }
+
+        .fcc-btn:hover {
+            background-color: #cc0000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .danger-btn {
+            background-color: #e74c3c;
+        }
+
+        .danger-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .success-btn {
+            background-color: #2ecc71;
+        }
+
+        .success-btn:hover {
+            background-color: #27ae60;
+        }
+
+        .info-section {
+            margin-top: 24px;
+            padding: 16px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 16px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .button-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Control Panel</h1>
+        
+        <div class="button-grid">
+            <button onclick="median.window.close()">Close App</button>
+            <a class="fcc-btn" href="https://median.dev">Médian Test Doc.</a>
+            <button onclick="median.statusbar.set(transparentLightMode)" class="button-demo">Transparent Light Mode</button>
+            <button onclick="median.statusbar.set(transparentDarkMode)" class="button-demo">Transparent Dark Mode</button>
+            <button onclick="median.statusbar.set(whiteLightMode)" class="button-demo">White Light Mode</button>
+            <button onclick="median.statusbar.set(blackDarkMode)" class="button-demo">Black Dark Mode</button>
+            <button onclick="median.statusbar.set(overlayOn)" class="button-demo">Overlay On</button>
+            <button onclick="median.statusbar.set(overlayOff)" class="button-demo">Overlay Off</button>
+            <button class="button-demo danger-btn" onclick="clearCache()">Clear Cache</button>
+            <button onclick="gonative.android.screen.fullscreen();" class="button-demo success-btn">Enable Full Screen</button>
+            <button onclick="gonative.android.screen.normal();" class="button-demo">Disable Full Screen</button>
+            <a class="fcc-btn" href="https://youtube.com">YouTube</a>
+            <button onclick="median.open.appSettings()" class="button-demo">Open App Settings</button>
+        </div>
+        
+        <div class="info-section">
+            <p>This control panel is optimized for all devices and screen sizes. The buttons are responsive and will adjust based on your screen width.</p>
+        </div>
+    </div>
+
+    <script>
+        // User Agent Detection
+        if (navigator.userAgent.toLowerCase().includes('median')) {
+            // If we're already on the control panel page, don't redirect again
+            if (!window.location.href.includes('control-panel')) {
+                window.location.href = 'https://joinmeonfb.github.io/uacheck/control-panel-yt_wv.html';
+            }
+        }
+
+        // Status bar configuration objects
+        var transparentLightMode = {
+            style: "light",
+            color: "00000000",
+            overlay: true
+        };
+        
+        var transparentDarkMode = {
+            style: "dark",
+            color: "00000000",
+            overlay: true
+        };
+        
+        var whiteLightMode = {
+            style: "light",
+            color: "#FFFFFF"
+        };
+        
+        var blackDarkMode = {
+            style: "dark",
+            color: "#000000"
+        };
+        
+        var overlayOn = {
+            overlay: true
+        };
+        
+        var overlayOff = {
+            overlay: false
+        };
+
+        // Clear cache function
+        function clearCache() {
+            if (typeof median !== 'undefined' && median.webview && median.webview.clearCache) {
+                median.webview.clearCache();
+                alert('Cache cleared successfully!');
+            } else {
+                alert('Clear cache function is not available in this environment.');
+            }
+        }
+    </script>
+</body>
+</html>
